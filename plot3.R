@@ -11,7 +11,6 @@ png(filename = "plot3.png")
 library(ggplot2)
 png3 <- ggplot(data = NEI,aes(factor(year),Emissions,fill=type)) +
   geom_bar(stat="identity") +
-  guides(fill=FALSE)+
   facet_grid(cols=vars(type),scales = "free",space="free") + 
   labs(x="Year", y="Total PM2.5 Emission (Tons)") + 
   labs(title="Total PM2.5 emissions in Baltimore City during 1999-2008 by Source Type")
